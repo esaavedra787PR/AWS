@@ -1,9 +1,15 @@
-Create an Account
-With the root account you are going to activate MFA and create a group "Administrators"
-assing administrator acces to the group and add users. 
-Sing out 
+1. Create an AWS Account
+    With the root account you are going to activate MFA and create a group "Administrators"
+      assing administrator acces to the group and add users. 
+      Sing out 
 
-Log as administrator "not root accoutn":
+2.Log as administrator "not root accoutn":
+     Configure password policy
+     
+3.
+
+
+--------------------------------------------------------------------------------------------------------------------
 
 If you need to provides full access to AWS services and resources, but does not allow management of Users and groups.
 Use : PowerUserAccess
