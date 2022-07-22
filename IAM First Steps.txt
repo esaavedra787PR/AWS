@@ -1,0 +1,30 @@
+Create an Account
+With the root account you are going to activate MFA and create a group "Administrators"
+assisng administrator acces to the group and add users. 
+Sing out 
+
+With a new email account sing as a Adminitrator "not root"
+--------------------------------------------------------------
+Create Billing group 
+Json policy 
+
+  {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "aws-portal:ViewBilling",
+            "Resource": "*"
+        }
+    ]
+}
+--------------------------------------------------------------
+
+Prevent other users to see Billing account 
+Json Policy 
+
+
+
+
+
+
