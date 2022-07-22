@@ -3,9 +3,15 @@ With the root account you are going to activate MFA and create a group "Administ
 assing administrator acces to the group and add users. 
 Sing out 
 
-Log as administrator "not root accoutn"
+Log as administrator "not root accoutn":
 
-Create a Billing Group
+If you need to provides full access to AWS services and resources, but does not allow management of Users and groups.
+Use : PowerUserAccess
+
+
+If you need Allows users to view bills on the Billing Console.
+Use: AWSBillingReadOnlyAccess
+
 
 
 
