@@ -1,0 +1,9 @@
+sudo amazon-linux-extras install epel -y
+sudo yum install -y stress
+
+
+then enter to increase CPU utilization
+
+stress --cpu 2 --timeout 300
+
+
