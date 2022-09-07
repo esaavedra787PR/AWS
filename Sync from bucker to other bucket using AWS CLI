@@ -1,0 +1,1 @@
+aws s3 sync s3://from_my_bucket s3://to_my_other_bucket
