@@ -1,0 +1,5 @@
+Remember aws configure
+then update to the latest cli version
+
+aws s3api list-objects-v2 \
+    --bucket my-bucket
