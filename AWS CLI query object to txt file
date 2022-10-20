@@ -1,3 +1,5 @@
+Link: https://stackoverflow.com/questions/42617247/aws-s3-how-to-get-all-files-that-are-glacier-storage-class
+
 aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`DEEP_ARCHIVE`]' --max-item 700000 > Deeparchives.txt
 
 aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`GLACIER`]' --max-item 700000 > Glacier.txt
