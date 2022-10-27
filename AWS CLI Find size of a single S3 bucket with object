@@ -1,0 +1,7 @@
+aws s3 ls --summarize --human-readable --recursive s3://<bucket-name>/
+
+
+
+
+In a txt file
+aws s3 ls --summarize --human-readable --recursive s3://<bucket-name>/ > txt.text 
