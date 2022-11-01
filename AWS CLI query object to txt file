@@ -19,9 +19,14 @@ aws s3api list-objects-v2 --bucket edwintest5 --query "Contents[?StorageClass=='
 aws s3api list-objects-v2 --bucket edwintest5 --query "Contents[?StorageClass=='DEEP_ARCHIVE']" --output text > test.txt
 
 With MAX item
+aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`STANDARD`]' --max-item 700000 > Deeparchives.txt
+aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`REDUCED_REDUNDANCY`]' --max-item 700000 > Deeparchives.txt
+aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`STANDARD_IA`]' --max-item 700000 > Deeparchives.txt
+aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`ONE-ZONE_IA`]' --max-item 700000 > Deeparchives.txt
+aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`INTELLIGENT_TIERING`]' --max-item 700000 > Deeparchives.txt
+aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`GLACIER`]' --max-item 700000 > Deeparchives.txt
 aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`DEEP_ARCHIVE`]' --max-item 700000 > Deeparchives.txt
-aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`DEEP_ARCHIVE`]' --max-item 700000 > Deeparchives.txt
-aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`DEEP_ARCHIVE`]' --max-item 700000 > Deeparchives.txt
+
 
 With MAX item
 aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`GLACIER`]' --max-item 700000 > Glacier.txt
