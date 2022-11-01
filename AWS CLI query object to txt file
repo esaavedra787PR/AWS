@@ -1,5 +1,11 @@
 Link: https://stackoverflow.com/questions/42617247/aws-s3-how-to-get-all-files-that-are-glacier-storage-class
 
+Remember
+S3 Glacier Instant Retrieval. --storage-class  (string)  The  type  of storage to use for the object. 
+Valid choices are: STANDARD | REDUCED_REDUNDANCY | STANDARD_IA  |  ONE-ZONE_IA  |  INTELLIGENT_TIERING  |  GLACIER | DEEP_ARCHIVE
+
+
+
 To just query
 aws s3api list-objects-v2 --bucket edwintest5 --query "Contents[?StorageClass=='STANDARD']" --output text 
 aws s3api list-objects-v2 --bucket edwintest5 --query "Contents[?StorageClass=='REDUCED_REDUNDANCY']" --output text 
@@ -19,32 +25,16 @@ aws s3api list-objects-v2 --bucket edwintest5 --query "Contents[?StorageClass=='
 aws s3api list-objects-v2 --bucket edwintest5 --query "Contents[?StorageClass=='DEEP_ARCHIVE']" --output text > test.txt
 
 With MAX item
-aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`STANDARD`]' --max-item 700000 > Deeparchives.txt
-aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`REDUCED_REDUNDANCY`]' --max-item 700000 > Deeparchives.txt
-aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`STANDARD_IA`]' --max-item 700000 > Deeparchives.txt
-aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`ONE-ZONE_IA`]' --max-item 700000 > Deeparchives.txt
-aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`INTELLIGENT_TIERING`]' --max-item 700000 > Deeparchives.txt
-aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`GLACIER`]' --max-item 700000 > Deeparchives.txt
-aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`DEEP_ARCHIVE`]' --max-item 700000 > Deeparchives.txt
+aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`STANDARD`]' --max-item 700000 > archives.txt
+aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`REDUCED_REDUNDANCY`]' --max-item 700000 > archives.txt
+aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`STANDARD_IA`]' --max-item 700000 > archives.txt
+aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`ONE-ZONE_IA`]' --max-item 700000 > archives.txt
+aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`INTELLIGENT_TIERING`]' --max-item 700000 > archives.txt
+aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`GLACIER`]' --max-item 700000 > archives.txt
+aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`DEEP_ARCHIVE`]' --max-item 700000 > archives.txt
 
 
-With MAX item
-aws s3api list-objects --bucket edwintest5 --query 'Contents[?StorageClass==`GLACIER`]' --max-item 700000 > Glacier.txt
-
-
-
-
-Remember
-S3 Glacier Instant Retrieval. --storage-class  (string)  The  type  of storage to use for the object. 
-Valid choices are: STANDARD | REDUCED_REDUNDANCY | STANDARD_IA  |  ONE-ZONE_IA  |  INTELLIGENT_TIERING  |  GLACIER | DEEP_ARCHIVE
-
-
-
-
-
-
-
-
+......................................................................................................
 check this code
 
 # use awk to select filepath ("key") from output:
